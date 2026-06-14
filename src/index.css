@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-calligraphy: "Great Vibes", cursive;
+
+  /* Premium Magical Colors */
+  --color-gold-50: #fffbeb;
+  --color-gold-200: #fde047;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-rose-gold: #ecc0bc;
+  --color-rose-gold-light: #f8f8f8;
+  --color-rose-gold-dark: #ec4899;
+  --color-magic-dark: #050510;
+  --color-magic-deep: #0f0724;
+  --color-magic-purple: #1a103d;
+  --color-neon-pink: #ec4899;
+  --color-neon-blue: #a855f7;
+  --color-neon-purple: #bd00ff;
+}
+
+/* Base Document Styles */
+html, body {
+  background-color: var(--color-magic-dark);
+  color: #f7e6e4;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+/* Neon Glow Accents */
+.text-neon-pink {
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.4), 0 0 30px rgba(255, 20, 147, 0.2);
+}
+
+.text-neon-gold {
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.6), 0 0 20px rgba(251, 191, 36, 0.4), 0 0 30px rgba(251, 191, 36, 0.2);
+}
+
+.text-neon-purple {
+  text-shadow: 0 0 10px rgba(189, 0, 255, 0.6), 0 0 20px rgba(189, 0, 255, 0.4);
+}
+
+.box-neon-gold {
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.25), inset 0 0 15px rgba(251, 191, 36, 0.1);
+}
+
+.box-neon-pink {
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.2), inset 0 0 10px rgba(255, 20, 147, 0.1);
+}
+
+/* Premium Frost Glass */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-heavy {
+  background: rgba(8, 4, 20, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(236, 192, 188, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-magic-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 192, 188, 0.2);
+  border-radius: 9999px;
+  border: 2px solid var(--color-magic-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 192, 188, 0.4);
+}
+
+/* Floating Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 25s linear infinite;
+}
+
+/* Custom Glow Orbs for background depth */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Interactive custom styled components */
+.polaroid-frame {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(236, 191, 188, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 1px 5px rgba(255, 255, 255, 0.1);
+}

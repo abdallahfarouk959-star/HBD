@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Malak",
+  "description": "A magical, interactive birthday experience for Malak with dynamic starry skies, floating balloons, a memory lane carousel, and a virtual candle blowing experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
